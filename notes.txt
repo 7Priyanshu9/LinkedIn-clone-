@@ -1,0 +1,10 @@
+1. why are we using Switch in react router dom ?
+<Switch> will iterate over its children <Route> elements and render the first one that matches the current location.
+If a <Route> is matched, <Switch> will stop looking for further matches and render only that specific <Route>.
+If no <Route> is matched, a fallback route or component can be provided as a last child inside <Switch> to handle cases where no route matches.
+in latest version Switch is replaced with <Routes>
+
+
+2. why are we usin gthis const User = styled(NavList)``?
+
+here we are importing the css properties directlt from the NavList into the user ;
