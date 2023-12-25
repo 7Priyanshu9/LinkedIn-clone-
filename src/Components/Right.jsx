@@ -63,7 +63,12 @@ const NewsList = styled.div`
     `;
 
 const Container = styled.div`
-  grid-area:Right 
+  grid-area:Right ;
+  width:85%;
+
+  @media (max-width:768px) {
+    width:100%;
+  }
 `;
 
 
