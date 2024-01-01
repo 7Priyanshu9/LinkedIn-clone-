@@ -51,12 +51,156 @@ const Middle = () => {
           <img src="./src/images/more.svg" alt="3 dots" />
         </button>
       </SharedUser>
+      <Description>Title over here </Description>
+      <SharedImg>
+        <a>
+          <img src="./src/images/tech.jpg" alt="tech" />
+        </a>
+      </SharedImg>
+
+      <Reactions>
+        <li>
+          <button>
+            <img src="./src/images/like.svg" alt="Bulb" />
+            <img src="./src/images/bulb.svg" alt="like" />
+            <img src="./src/images/heart.svg" alt="heart" />
+            <span>Jhon Doe and 68 others</span>
+          </button>
+        </li>
+
+        <li>
+          <span>16 comments </span>
+        </li>
+       
+      </Reactions>
+      <Option>
+        <button>
+          <img src="./src/images/option-like.svg" alt="like" />
+          <span>Like</span>
+        </button>
+        <button>
+          <img src="./src/images/option-comment.svg" alt="" />
+          <span>Comment</span>
+        </button>
+        <button>
+          <img src="./src/images/option-repost.svg" alt="" />
+          <span>Repost</span>
+        </button>
+        <button>
+          <img src="./src/images/option-share.svg" alt="" />
+          <span>Send</span>
+        </button>
+      </Option>
       </Post>
     </Container>
   )
 }
+
+const Option= styled.ul`
+line-height:1.3;
+display:flex;
+align-items:center;
+overflow:auto;
+margin: 0 16px;
+justify-content:space-between;
+padding: 8px 0 ;
+border-bottom:1px solid #e9e5df;
+list-style: none;
+
+
+  button{
+    display:flex;
+    border:none;
+    margin:none;
+    background:transparent;
+    gap:5px;
+    align-content:center;
+    cursor:pointer;
+    text-align:center;
+    font-size:12px;
+    color:rgba(0,0,0,0.6);
+    align-items:center;
+  }
+`;
+
+
 const Container = styled.div`
 grid-area:Middle;
+`;
+const Reactions = styled.ul`
+display:flex;
+justify-content:space-between;
+padding:0 10px;
+list-style:none;
+border-bottom:1px solid rgba(0,0,0,0.3);
+button{
+  border:none;
+  margin:none;
+  list-style:none;
+  background-color: white;
+  
+  img{
+    &:first-child{
+      position:relative;
+
+    }
+
+    &:nth-child(2){
+      position:absolute;
+      left:28px;
+    }
+
+    &:nth-child(3){
+      position:absolute;
+      left:39px;
+    }
+  }
+    span{
+      font-size:12px;
+      margin-left:25px;
+      color: rgba(0,0,0,0.5);
+      padding-bottom:10px;
+      text-align:center;
+    }   
+}
+
+li{
+  span{
+    font-size:12px;
+      margin-left:25px;
+      color: rgba(0,0,0,0.5);
+      margin-bottom:10px;
+      text-align:center;
+  }
+}
+`;
+
+
+
+
+
+
+const Description = styled.div`
+  padding:0 16px;
+  overflow:hidden;
+  color:rgba(0,0,0,0.9);
+  font-size:14px;
+  justify-content:last baseline
+
+`;
+const SharedImg = styled.div`
+  margin-top:8px;
+  width:100%;
+  display:block;
+  position:relative;
+  background-color:#f9fafb;
+  height:100%;
+  img{
+    object-fit:contain;
+    width:100%;
+    height :80%;
+
+  }
 `;
 
 const Commoncard = styled.div`
